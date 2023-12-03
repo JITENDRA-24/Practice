@@ -3,7 +3,7 @@ package logical;
 public class CopyArraytoOtherArray {
 	public static void main(String[] args) {        
         //Initialize array     
-   int [] ar = new int [] {1, 2, 3, 4, 5};     
+   int [] ar = {1, 2, 3, 4, 5};     
                                                        //Create another array arr2 with size of ar   
    int arCopy[] = new int[ar.length];    
                                                         //Copying all elements of one array into another    

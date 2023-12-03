@@ -1,30 +1,26 @@
 package IntreviewQ;
 
-import java.util.Scanner;
+import java.util.HashMap;
+import java.util.Set;
 
 public class AmstrongNo {
-public static void main(String[]args) {
-	
-	@SuppressWarnings("resource")
-	Scanner s = new Scanner(System.in);
-	System.out.print("Enter the Number:");
-	int a= s.nextInt();
-	int temp=a;
-	int reminder=0;
-	int result=0;
-	
-	while(temp!=0) {
-		 reminder = temp%10;
-		 result = result + (reminder*reminder*reminder);
-		 temp = temp/10;
-	}
-	
-	if(result==a) {
-		System.out.println(a +" is Armstrong Number");
-	}
-	else {
-		System.out.println(a +" is not Armstrong Number");
-	}
+	public static void main(String[] args){
+
+		int [] ar= {10,20,50,50,40,40,40};
+
+		HashMap<Integer, Integer> mp=new HashMap<>();
+				
+			for(int num1:ar) {
+						if(mp.containsKey(num1))
+						{
+							mp.put(num1, mp.get(num1)+1);
+						}
+			                else
+						{
+							mp.put(num1, 1);
+						}}
+					System.out.println(mp);
+
 	
 }
 }
